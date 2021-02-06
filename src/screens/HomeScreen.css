@@ -1,0 +1,6 @@
+.home__screen{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    height: auto;
+    background: black;
+}
