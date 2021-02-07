@@ -1,61 +1,116 @@
 .profileScreen {
-	height: 100vh;
-	color: white;
+  color: white;
+  height: 100vh;
+  overflow-y: hidden;
 }
-
 .profileScreen__body {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-	margin: 0 auto;
-	padding-top: 8%;
-	max-width: 800px;
-
-	h1 {
-		font-size: 60px;
-		font-weight: 400;
-		border-bottom: 1px solid #282c2d;
-		margin-bottom: 20px;
-	}
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  max-width: 800px;
 }
-
 .profileScreen__info {
-	display: flex;
-
-	.profileScreen__image {
-		height: 100px;
-	}
+  display: flex;
 }
-
 .profileScreen__details {
-	color: white;
-	margin-left: 25px;
-	flex: 1;
-
-	h2 {
-		background-color: gray;
-		padding: 15px;
-		font-size: 15px;
-		padding-left: 20px;
-	}
+  color: white;
+  margin-left: 25px;
+  flex: 1;
 }
-
+.profileScreen__body > h1 {
+  font-size: 60px;
+  font-weight: 400;
+  border-bottom: 1px solid #282c2d;
+  margin-bottom: 20px;
+}
+.profileScreen__details > h2 {
+  background-color: gray;
+  padding: 15px;
+  font-size: 15px;
+  padding-left: 20px;
+}
+.profileScreen__signout {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 5%;
+  width: 100%;
+  color: #fff;
+  background-color: #e50914;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
 .profileScreen__plans {
-	h3 {
-		border-bottom: 1px solid #282c2d;
-		padding-bottom: 10px;
-		margin-top: 20px;
-	}
+  margin-top: 30px;
 }
-
-.profileScreen__signOut {
-	padding: 10px 20px;
-	font-size: 1rem;
-	width: 100%;
-	margin-top: 5%;
-	color: white;
-	background-color: #e50914;
-	font-weight: 600;
-	border: none;
-	cursor: pointer;
+.profileScreen__plans > h3 {
+  border-bottom: 1px solid #282c2d;
+  padding-bottom: 10px;
+}
+.profileScreen__plans > h4 {
+  margin-top: 20px;
+  color: gray;
+}
+.standard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.standard > h4 {
+  color: rgb(163, 160, 160);;
+}
+.basic > h4 {
+  color: rgb(163, 160, 160);;
+}
+.premium > h4 {
+  color: rgb(163, 160, 160);;
+}
+.basic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.premium {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.standard > button {
+  padding: 10px 15px;
+  color: white;
+  font-size: 1rem;
+  background-color: #e50914;
+  font-weight: 500;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+.basic > button {
+  padding: 10px 15px;
+  color: white;
+  font-size: 1rem;
+  background-color: #e50914;
+  font-weight: 500;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+.premium > button {
+  padding: 5px 32px;
+  color: white;
+  font-size: 1rem;
+  background-color: gray;
+  font-weight: 500;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+.profileScreen__info > img {
+  height: 100px;
 }
