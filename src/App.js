@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import LoginScreen from './screens/LoginScreen';
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { auth } from "./firebase";
-import { useDispatch } from "react-redux";
-import { useSelector } from 'react-redux';
-import ProfileScreen from './screens/ProfileScreen';
+import LoginScreen from "./screens/LoginScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 import { login, logout, selectUser } from "./features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
 	const user = useSelector(selectUser);
@@ -16,7 +15,6 @@ function App() {
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged((userAuth) => {
 			if (userAuth) {
-				//logged in
 				dispatch(
 					login({
 						uid: userAuth.uid,
@@ -24,7 +22,6 @@ function App() {
 					})
 				);
 			} else {
-				//logged out
 				dispatch(logout());
 			}
 		});
@@ -38,21 +35,17 @@ function App() {
 				{!user ? (
 					<LoginScreen />
 				) : (
-				<Switch>
-					<Route path="/profile">
-						<ProfileScreen />
-					</Route>
-				 <Route exact path="/" >
-				 	<HomeScreen />
-				</Route>
-			</Switch>
-			)}
-		</Router>
-
+					<Switch>
+						<Route path="/profile">
+							<ProfileScreen />
+						</Route>
+						<Route exact path="/">
+							<HomeScreen />
+						</Route>
+					</Switch>
+				)}
+			</Router>
 		</div>
-
-
-
 	);
 }
 
