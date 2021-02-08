@@ -1,0 +1,103 @@
+.faqHeading {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+  border-top: 0.4rem #333333 solid;
+}
+
+.faqHeading > h1 {
+  font-size: 3.125rem;
+  margin-bottom: 30px;
+  color: #eee;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.faqs {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.faqs .faq {
+  margin: 15px;
+  padding: 15px;
+  color: #fff;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    0,
+    rgba(0, 0, 0, 0) 60% rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.faqs .faq .faq-question {
+  position: relative;
+  font-size: 20px;
+  padding-right: 80px;
+
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+
+  background-image: "arrow_down.svg";
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: all 0.4s ease-out;
+}
+
+.faqs .faq .faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.faqs .faq.open .faq-question {
+  margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-question::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faqs .faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+.loginScreen__input {
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px;
+}
+.loginScreen__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+.loginScreen__getStarted{
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+}
