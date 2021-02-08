@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SignupScreen from "./SignupScreen";
-import Content from '../Content';
-import Questions from '../Questions';
 import Footer from "../Footer";
 import "./LoginScreen.css";
 
@@ -50,8 +48,6 @@ function LoginScreen() {
           </div>
         </div>
       </div>
-      <Content />
-      <Questions />
       <Footer />
     </>
   );

@@ -1,12 +1,10 @@
 import React from 'react';
 import './Footer.css';
-import FAQ from "./FAQ"
 
 const footerLinks = [
   {
     name: 'FAQ',
     path:'',
-    onClick: { FAQ },
   },
   {
     name: 'Help Center',
